@@ -1,6 +1,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import "./responsive.css";
+
 
 /* 🔥 custom global reset — needed to stop scrolling problem */
 * {

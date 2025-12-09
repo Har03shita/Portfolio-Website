@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 🔥 custom global reset — needed to stop scrolling problem */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden; /* stops left–right scrolling */
+  font-family: serif;
+}
+.hero {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.mountains {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.branch {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 55%;
+  opacity: 0.9;
+  z-index: 2;
+}
+
+.moonBlock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.moon {
+  width: 65vh;
+}
+
+.textOnMoon {
+  position: absolute;
+  top: 34%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #fff5e1;
+    z-index: 5;
+}
+
+
+.title {
+  font-size: 65px;
+  font-weight: bold;
+  color: #fff5e1; /* slightly cotton color */
+}
+
+.welcome, .desc, .year {
+  font-size: 18px;
+}
+
+.year {
+  margin-top: 2px;
+}
+
+.nav {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  z-index: 4;
+}
+
+.nav a {
+  margin-left: 18px;
+  padding: 7px 14px;
+  border: 2px solid #b42e2b;
+  border-radius: 3px;
+  color: #b42e2b;
+  font-size: 15px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  background: #b42e2b;
+  color: white;
+}
+
+.explore {
+  position: absolute;
+  bottom: 45px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 34px;
+  border: 2px solid #b42e2b;
+  color: #b42e2b;
+  background: transparent;
+  font-size: 18px;
+  transition: 0.3s;
+  z-index: 3;
+}
+
+.explore:hover {
+  background: #b42e2b;
+  color: white;
+}
+branchtop {
+  position: absolute;
+  top: -10px;   /* move upward */
+  left: -50px;  /* move more to the left */
+  width: 27%;    /* slightly larger */
+  z-index: 9;
+  pointer-events: none;
+  opacity: 0.9;
+
+  transform: rotate(-8deg);
+  transform-origin: left top;
+}
+.cloud-left, .cloud-right {
+  position: absolute;
+  top: 10%;
+  width: 60vw;
+  pointer-events: none;
+  opacity: 0.9;
+  z-index: 3;
+}
+.mistOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 9999;  /* 👆 ON TOP OF EVERY ELEMENT */
+  pointer-events: none;
+}
+.fogVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  z-index: 8; /* Above mountain but below moon + text */
+  pointer-events: none;
+  animation: fogDrop 6s ease-out forwards;
+}
+
+@keyframes fogDrop {
+  from {
+    transform: translateY(-60%);
+  }
+  to {
+    transform: translateY(22%); /* settles near bottom fog */
+  }
+}
+.moon {
+  position: absolute;
+  top: 0;                    /* let animation handle vertical landing */
+  left: 35%;                 /* perfect horizontal centering */
+  transform: translateX(-50%);
+  width: 60vh;
+  z-index: 4;
+  pointer-events: none;
+  animation: moonGlow 4s ease-in-out infinite;
+}
+
+
+
+
+
+
+@keyframes moonGlow {
+  0% {
+    filter: drop-shadow(0 0 14px rgba(255, 190, 170, 0.55));
+  }
+  50% {
+    filter: drop-shadow(0 0 28px rgba(255, 190, 170, 0.9));
+  }
+  100% {
+    filter: drop-shadow(0 0 14px rgba(255, 190, 170, 0.55));
+  }
+}
+.about {
+  min-height: 100vh;
+  background-image: url("../assets/moonTexture.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 0;
+  color: #fff5e1;
+}
+
+.aboutContent {
+  max-width: 760px;
+  text-align: center;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+
+
+
+
+
+
+
+

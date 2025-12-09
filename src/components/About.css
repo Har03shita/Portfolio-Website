@@ -1,0 +1,127 @@
+.about {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 100px;
+  gap: 60px;
+  background: #b4554f;
+}
+
+/* LEFT SIDE */
+.about-left {
+  flex: 1;
+}
+
+/* Title wrapper ensures card appears directly under title */
+.about-title-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-bottom: 40px; /* space after card before paragraph */
+}
+
+/* Actual title text */
+.about-title {
+  font-size: 5rem;
+  font-weight: 600;
+  color: #f7dbcc;
+  margin: 0 0 0 2px; /* 🔥 push text a bit to the right */
+  z-index: 2;
+  position: relative;
+}
+
+/* 🔥 Card positioned BELOW the title */
+.about-title-bg-card {
+  position: absolute;
+  top: 95px; /* moves it BELOW the title */
+  left: 40%;
+  transform: translateX(-50%);
+  width: 450px;
+  height: 70px;
+  background: #3c0000;
+  border-radius: 45px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.45);
+  z-index: -1;
+}
+
+.title-under-card {
+  width: 320px; /* slightly wider bar */
+  height: 80px;
+  background: #670010;
+  border-radius: 45px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.45);
+  margin-top: -80px; /* overlap under ABOUT like before */
+  margin-left: -18px; /* pull bar a bit left so it “wraps” the text */
+  margin-bottom: 35px;
+  /* padding here is not needed because there is no text inside this div */
+}
+
+.me-title {
+  font-size: 4.8rem;
+  font-weight: 600;
+  color: #f7dbcc;
+  margin-left: 16px;
+}
+
+/* Paragraph */
+.about-intro {
+  font-size: 1.35rem;
+  line-height: 1.85;
+  color: #f7dbcc;
+  max-width: 600px;
+}
+
+/* ✨ Highlight for name */
+.highlight-name {
+  font-weight: 700;
+  color: #ffcfbf;
+  text-shadow: 0 0 6px rgba(255, 230, 210, 0.35);
+}
+
+/* RIGHT SIDE */
+.about-right {
+  flex: 1.2;
+}
+
+/* Education Card */
+.edu-card {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px;
+  border-radius: 14px;
+  backdrop-filter: blur(4px);
+  margin-bottom: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.26);
+}
+
+/* Timeline Skills */
+.timeline {
+  margin-left: 22px;
+  border-left: 2px solid rgba(255, 255, 255, 0.38);
+  padding-left: 40px;
+}
+
+.timeline-item {
+  margin-bottom: 48px;
+  position: relative;
+}
+
+.timeline-item .dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #fff5e1;
+  position: absolute;
+  left: -48px;
+  top: 4px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+}
+
+.timeline-item h3 {
+  font-size: 27px;
+  margin-bottom: 6px;
+  color: #fff;
+}
+
+.timeline-item p {
+  font-size: 19px;
+  opacity: 0.9;
+  color: #ffe7d4;
+}
